@@ -9,6 +9,11 @@
   export default {
     components:{
       ContactForm
+    },
+    data() {
+      return {
+        title: 'Hello',
+      }
     }
   }
 </script>

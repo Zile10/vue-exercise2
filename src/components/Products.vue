@@ -1,5 +1,6 @@
 <template>
-  <div id="cards-holder">
+  <Spinner v-if="!products.length"/>
+  <div id="cards-holder" v-else>
     <div class="card" style="width: 18rem" v-for="item in products" :key="item">
       <img :src="item.imageSrc" class="card-img-top" :alt="item.itemName" />
       <div class="card-body">
@@ -17,6 +18,7 @@
 </template>
 
 <script>
+import Spinner from './Spinner.vue'
 export default {
   data() {
     return {
@@ -141,32 +143,24 @@ export default {
       ],
     }; // End of 'return' object
   },
+  components: {
+    Spinner
+  }
 };
 </script>
 
 <style scoped>
   #cards-holder {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: auto;
-    row-gap: 20px;
+    margin: 0 50px;
+    display: flex;
+    flex-flow: row wrap;
+    /* gap: 80px; */
+    gap: 3rem;
   }
   .cards-holder .card {
-    grid-column: span 1;
     margin: auto;
   }
   .cards-holder .card h5 {
     text-transform: capitalize;
-  }
-  .card {
-    width: 18rem;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    box-shadow: 0 0 5px black;
-    padding: 10px;
-  }
-  .card img {
-    width: inherit;
   }
 </style>
