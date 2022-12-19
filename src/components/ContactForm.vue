@@ -8,7 +8,7 @@
     <input type="number" placeholder="Age..." v-model="age">
     <label for="dob">DOB</label>
     <input type="date" placeholder="DOB..." v-model="dob">
-    <button type="submit" id="submit" @click.prevent="submitForm">Submit Form</button>
+    <button type="submit" id="submit" class="border-danger" @click.prevent="submitForm">Submit Form</button>
   </form>
 </template>
 
@@ -17,7 +17,7 @@
 export default {
   methods: {
     submitForm(){
-      alert(`${this.fullName} at age ${this.age} was born on ${this.dob} and has an email address of ${this.email}`)
+      // alert(`${this.fullName} at age ${this.age} was born on ${this.dob} and has an email address of ${this.email}`)
     }
   },
 }
@@ -29,5 +29,18 @@ export default {
     flex-direction: column;
     width: 80%;
     margin: auto;
+  }
+  form input{
+    margin-bottom: 10px
+  }
+  form button {
+    background-color:crimson;
+    color: white;
+  }
+  form button:hover{
+    scale: 1.01
+  }
+  form button:active{
+    scale: 0.99;
   }
 </style>

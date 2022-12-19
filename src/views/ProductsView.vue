@@ -1,4 +1,6 @@
 <template>
+  <h1>Products</h1>
+  <hr>
   <Products/>
 </template>
 
@@ -12,6 +14,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  hr {
+    height: 30px;
+    border-top: 2px solid black;
+    width: 85%;
+    margin: 25px auto;
+  }
 </style>

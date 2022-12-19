@@ -8,8 +8,6 @@
         <p class="card-text">
           <span v-text="'Price: R' + item.price"></span><br>
           <span v-text="'Color: ' + item.color"></span>
-          <!-- <span v-text="` + ${item.color}`"></span>
-          <span v-text="'' + item"></span> -->
         </p>
         <button href="#" class="btn btn-primary">Button</button>
       </div>
